@@ -16,6 +16,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: "3.19.3"
+      - run: flutter clean
       - run: flutter pub get
       - run: flutter pub run flutter_native_splash:create
       - run: flutter build apk --release
